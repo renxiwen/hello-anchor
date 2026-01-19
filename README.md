@@ -1,1 +1,1 @@
-# hello-solana
+# hello-anchor
