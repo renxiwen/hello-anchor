@@ -1,15 +1,15 @@
+use anchor_lang::prelude::*;
+
 mod state;
 mod error;
 mod constants;
 mod instructions;
-use anchor_lang::prelude::*;
+
 pub use constants::*;
-use instructions::take_offer::TakeOffer;
 pub use state::*;
-use instructions::make_offer::MakeOffer;
+pub use instructions::*;
 
 declare_id!("11111111111111111111111111111111");
-
 
 #[program]
 pub mod escrow {
@@ -28,4 +28,5 @@ pub mod escrow {
     pub fn take_offer(context: Context<TakeOffer>) -> Result<()> {
         instructions::take_offer::send_wanted_tokens_to_maker(&context)?;
         instructions::take_offer::withdraw_and_close_vault(context)
-    }}
+    }
+}
