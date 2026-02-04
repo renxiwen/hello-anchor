@@ -3951,3 +3951,4 @@ target
 /.idea/hello-anchor.iml
 /.idea/modules.xml
 /.idea/vcs.xml
+*/.DS_Store
