@@ -4,9 +4,7 @@ use anchor_spl::{
     associated_token::AssociatedToken,
     token_interface::{Mint, TokenAccount, TokenInterface},
 };
-
 use crate::{Offer, ANCHOR_DISCRIMINATOR_LENGTH};
-
 use super::transfer_tokens;
 
 #[derive(Accounts)]
@@ -39,7 +37,7 @@ pub struct MakeOffer<'info> {
     init,
     payer = maker,
     associated_token::mint = token_mint_a,
-    associated_token::authority = maker,
+    associated_token::authority = offer,
     associated_token::token_program = token_program
     )]
     pub vault: InterfaceAccount<'info, TokenAccount>,
