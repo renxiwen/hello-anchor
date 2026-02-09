@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use anchor_lang::system_program;
 use anchor_lang::system_program::Transfer;
 
-declare_id!("9A7RG9zq2b3qzGvWdo28qbhBUEe3C54a8PiajBQwLQQ2");
+declare_id!("BHaQmbreJ3Axmib5mPGuNYDbQrSV54c4jUN5God3hipG");
 
 #[program]
 pub mod cpi_demo {
@@ -30,7 +30,7 @@ pub struct SolTransfer<'info> {
     #[account(mut)]
     sender: Signer<'info>,
     #[account(mut)]
-    receiver: AccountInfo<'info>,
+    receiver: SystemAccount<'info>,
     
     system_program: Program<'info, System>,
 }
