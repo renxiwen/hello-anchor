@@ -6,7 +6,8 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-pda_demo = "DvAiFhGXVzqySJaUVKgJcHrS9GzN6iFVJx81m2gVTZJd"
+#pda_demo = "DvAiFhGXVzqySJaUVKgJcHrS9GzN6iFVJx81m2gVTZJd"
+cpi_demo = "9A7RG9zq2b3qzGvWdo28qbhBUEe3C54a8PiajBQwLQQ2"
 
 [registry]
 url = "https://api.apr.dev"
