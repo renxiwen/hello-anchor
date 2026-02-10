@@ -1,10 +1,10 @@
 use anchor_lang::prelude::*;
+use anchor_lang::system_program::{Transfer, transfer};
 
 declare_id!("DiA1UmunmR3kZJidoXwvsSyAyBEuR647EvYubXboQRED");
 
 #[program]
 pub mod cpi_pda_demo {
-    use anchor_lang::system_program::{Transfer, transfer};
 
     use super::*;
     
